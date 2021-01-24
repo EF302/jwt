@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lwl.jwt.dao.UserDAO">
+
+    <!--user报红是MyBatis插件导致的，我配置使用了别名，并在xml中使用了别名导致的，不用管，能正常运行-->
+    <select id="login" parameterType="user" resultType="user">
+        select id,name,password from user where name =#{name} and password=#{password}
+   </select>
+
+</mapper>
